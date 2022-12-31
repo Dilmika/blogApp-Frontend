@@ -12,7 +12,7 @@ const Home = () => {
 
   useEffect(() => {
     const fetchWorkouts = async () => {
-      const response = await fetch('/api/workouts', {
+      const response = await fetch('https://blogapp-backend-vdcx.onrender.com/api/workouts', {
         headers : {
           'Authorization' : `Bearer ${user.token}`
         }
@@ -25,7 +25,7 @@ const Home = () => {
     }
 
     const  fetchBlogs = async () => {
-      const logResponse = await fetch('/api/blog/all', {
+      const logResponse = await fetch('https://blogapp-backend-vdcx.onrender.com/api/blog/all', {
         headers : {
           'Authorization' : `Bearer ${user.token}`
         } 

@@ -23,7 +23,7 @@ export default function AddBlog() {
         dispatch({ type: 'BLOG_LOADED', payload: blogLoaded })
 
         const fetchBlogs = async () => {
-            const response = await fetch('/api/blog', {
+            const response = await fetch('https://blogapp-backend-vdcx.onrender.com/api/blog', {
                 headers: {
                     'Authorization': `Bearer ${user.token}`
                 }
@@ -54,7 +54,7 @@ export default function AddBlog() {
         const blog = { title, content }
         console.log('blog: ', blog);
 
-        // const response = await fetch('api/blog', {
+        // const response = await fetch('https://blogapp-backend-vdcx.onrender.com/api/blog', {
         //     method: 'POST',
         //     body: JSON.stringify(blog),
         //     headers: {
