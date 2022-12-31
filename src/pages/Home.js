@@ -1,10 +1,10 @@
 import { useEffect }from 'react'
 import { useWorkoutsContext } from "../hooks/useWorkoutsContext"
 import {useAuthContext} from '../hooks/useAuthContext'
-
 // components
 import WorkoutDetails from '../components/WorkoutDetails'
 import WorkoutForm from '../components/WorkoutForm'
+
 
 const Home = () => {
   const {workouts, dispatch} = useWorkoutsContext()
@@ -24,9 +24,22 @@ const Home = () => {
       }
     }
 
-    if(user) fetchWorkouts()
+    const  fetchBlogs = async () => {
+      const logResponse = await fetch('/api/blog/all', {
+        headers : {
+          'Authorization' : `Bearer ${user.token}`
+        } 
+      })
 
-    fetchWorkouts()
+      const blog_json = await logResponse.json()
+      console.log('blog_json: ', blog_json);
+    }
+
+    if(user){
+      fetchWorkouts()
+      fetchBlogs()
+    }
+
   }, [dispatch, user])
 
   return (

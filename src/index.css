@@ -129,3 +129,75 @@ form.signup, form.login {
   background: #fff;
   border-radius: 4px;
 }
+
+/* Add Blog */
+.add-blog {
+  display: grid;
+  grid-template-columns: 2fr 2fr;
+  gap: 100px;
+}
+
+.blog-input-title {
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 50%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.blog-input-field{
+  margin-top: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.menu-add-blog{
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+menu {
+  display: flex;
+  align-items: center;
+}
+menu a, menu button {
+  margin-left: 10px;
+}
+menu button {
+  background: #fff;
+  color: var(--primary);
+  border: 1px solid var(--primary);
+  padding: 6px 10px;
+  border-radius: 4px;
+  font-family: "Poppins";
+  cursor: pointer;
+  font-size: 1em;
+  margin-left: 10px;
+}
+
+.text-area-error {
+  margin-top: 10px;
+  padding: 5px;
+  margin-bottom: 20px;
+  width: 100%;
+  height: 100%;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
+
+.addblog-input-error{
+  margin-top: 10px;
+  margin-bottom: 20px;
+  width: 50%;
+  border: 1px solid rgb(255, 0, 0);
+  border-radius: 4px;
+  box-sizing: border-box;
+}
